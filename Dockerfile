@@ -1,7 +1,7 @@
 # building production files
 FROM node:alpine as builder
 WORKDIR '/usr/app'
-COPY package.json ./
+COPY package*.json ./
 RUN npm install -g npm@7.5.0
 RUN npm install
 COPY ./ ./
